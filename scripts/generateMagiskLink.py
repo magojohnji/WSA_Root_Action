@@ -38,14 +38,142 @@ if magisk_ver == "stable" or magisk_ver == "beta" or magisk_ver == "canary" or m
         print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
         magisk_link = json.loads(requests.get(
             f"https://fastly.jsdelivr.net/gh/topjohnwu/magisk-files@master/{magisk_ver}.json").content)['magisk']['link']
-elif magisk_ver == "delta":
+
+elif magisk_ver == "delta-stable":
     try:
         magisk_link = json.loads(requests.get(
-            f"https://raw.githubusercontent.com/HuskyDG/magisk-files/main/canary.json").content)['magisk']['link']
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/delta/stable.json").content)['magisk']['link']
     except Exception:
         print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
         magisk_link = json.loads(requests.get(
-            f"https://fastly.jsdelivr.net/gh/HuskyDG/magisk-files@main/canary.json").content)['magisk']['link']
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master//delta/stable.json").content)['magisk']['link']
+
+elif magisk_ver == "delta-beta":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/delta/beta.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/delta/beta.json").content)['magisk']['link']
+
+elif magisk_ver == "delta-canary":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/delta/canary.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/delta/canary.json").content)['magisk']['link']
+
+elif magisk_ver == "delta-debug":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/delta/debug.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/delta/debug.json").content)['magisk']['link']
+
+elif magisk_ver == "delta-lite-canary":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/delta_lite/canary.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/delta_lite/canary.json").content)['magisk']['link']
+
+elif magisk_ver == "delta-lite-debug":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/delta_lite/debug.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/delta_lite/debug.json").content)['magisk']['link']
+
+elif magisk_ver == "maru-canary":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/maru/canary.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/maru/canary.json").content)['magisk']['link']
+
+elif magisk_ver == "maru-debug":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/maru/debug.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/maru/debug.json").content)['magisk']['link']
+
+elif magisk_ver == "maru-debug":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/maru/debug.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/maru/debug.json").content)['magisk']['link']
+
+elif magisk_ver == "cygisk-canary":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/cygisk/canary.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/cygisk/canary.json").content)['magisk']['link']
+
+elif magisk_ver == "cygisk-debug":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/cygisk/debug.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/cygisk/debug.json").content)['magisk']['link']
+
+elif magisk_ver == "monet-stable":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/monet/stable.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/monet/stable.json").content)['magisk']['link']
+
+elif magisk_ver == "monet-beta":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/monet/beta.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/monet/beta.json").content)['magisk']['link']
+
+elif magisk_ver == "monet-canary":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/monet/canary.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/monet/canary.json").content)['magisk']['link']
+
+elif magisk_ver == "monet-debug":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/moent/debug.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/monet/debug.json").content)['magisk']['link']
+
 elif magisk_ver == "alpha":
     try:
         magisk_link = json.loads(requests.get(
@@ -54,6 +182,15 @@ elif magisk_ver == "alpha":
         print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
         magisk_link = json.loads(requests.get(
             f"https://fastly.jsdelivr.net/gh/vvb2060/magisk_files/alpha.json").content)['magisk']['link']
+
+elif magisk_ver == "lite":
+    try:
+        magisk_link = json.loads(requests.get(
+            f"https://raw.githubusercontent.com/magojohnji/magisk-files-host/master/lite/lite.json").content)['magisk']['link']
+    except Exception:
+        print("Failed to fetch from GitHub API, fallbacking to jsdelivr...")
+        magisk_link = json.loads(requests.get(
+            f"https://fastly.jsdelivr.net/gh/magojohnji/magisk-files-host@master/lite/lite.json").content)['magisk']['link']
 
 print(f"download link: {magisk_link}", flush=True)
 

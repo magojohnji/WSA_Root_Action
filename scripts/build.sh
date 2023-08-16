@@ -169,8 +169,22 @@ MAGISK_VER_MAP=(
     "canary"
     "debug"
     "release"
-    "delta"
+    "delta-stable"
+    "delta-beta"
+    "delta-canary"
+    "delta-debug"
+    "delta-lite-canary"
+    "delta-lite-debug"
+    "lite"
     "alpha"
+    "cygisk-canary"
+    "cygisk-debug"
+    "maru-canary"
+    "maru-debug"
+    "monet-stable"
+    "monet-beta"
+    "monet-canary"
+    "monet-debug"
 )
 
 GAPPS_BRAND_MAP=(
